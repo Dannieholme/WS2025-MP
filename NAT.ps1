@@ -1,2 +1,3 @@
-﻿New-NetNat -name "NAT" -ExternalIPInterfaceAddressPrefix 192.168.103.0/25
+﻿New-NetNat -name "NAT" -InternalIPInterfaceAddressPrefix 192.168.103.0/25
+
 
