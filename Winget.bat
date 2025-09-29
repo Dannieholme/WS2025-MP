@@ -12,8 +12,8 @@ echo Installing Skype
 winget install --id Skype.Skype -e --silent --accept-package-agreements --accept-source-agreements
  
 echo ==================================
-echo Installing Java Runtime (Temurin 17)
-winget install --id Eclipse.Temurin.17.JRE -e --silent --accept-package-agreements --accept-source-agreements
+echo Installing Java JDK 17
+winget install --id Oracle.JDK.17 -e --silent --accept-package-agreements --accept-source-agreements
  
 echo ==================================
 echo Installing 7-Zip
