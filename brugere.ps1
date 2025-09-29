@@ -1,4 +1,4 @@
-
+Import-module ActiveDirectory
 $gruppe = Read-Host "Gruppenr?"
 $user = Read-Host "Bogstav?"
 
