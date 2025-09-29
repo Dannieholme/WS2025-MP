@@ -11,7 +11,13 @@ foreach ($bruger in $brugere) {
     $fuldenavn = "$($bruger.Fornavn) $($bruger.Efternavn)"
     
     # Opret brugeren
-    New-ADuser -Name $fuldenavn -GivenName $bruger.Fornavn -Surname $bruger.Efternavn -SamAccountName $bruger.Initialer -EmailAddress $bruger.Email -Path "OU=Company,OU=$($bruger.Afdeling),DC=enterprise,DC=$gruppe$user,DC=gf2" -AccountPassword (ConvertTo-SecureString $bruger.Password -AsPlainText -Force) -Enabled $true
-    
+    New-ADuser -Name $fuldenavn `
+            -GivenName $bruger.Fornavn `
+            -Surname $bruger.Efternavn `
+            -SamAccountName $bruger.Initialer `
+            -EmailAddress $bruger.Email `
+            -Path "OU=Company,OU=$($bruger.Afdeling),DC=enterprise,DC=$gruppe$user,DC=gf2" `
+            -AccountPassword (ConvertTo-SecureString $bruger.Password -AsPlainText -Force) `
+            -Enabled $true
     Write-Host "Oprettet bruger: $fuldenavn"
 }
