@@ -16,7 +16,7 @@ foreach ($bruger in $brugere) {
             -Surname $bruger.Efternavn `
             -SamAccountName $bruger.Initialer `
             -EmailAddress $bruger.Email `
-            -Path "OU=Company,OU=$($bruger.Afdeling),DC=enterprise,DC=$gruppe$user,DC=gf2" `
+            -Path "OU=$($bruger.Afdeling),OU=Company,DC=enterprise,DC=$gruppe$user,DC=gf2" `
             -AccountPassword (ConvertTo-SecureString $bruger.Password -AsPlainText -Force) `
             -Enabled $true
     Write-Host "Oprettet bruger: $fuldenavn"
