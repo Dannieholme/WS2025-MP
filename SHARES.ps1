@@ -32,7 +32,8 @@ New-SmbShare -Name "HomeUsers$" -Path "C:\Shares\HomeUsers" -FullAccess "Domain 
 
 # For hver bruger - opret personlig mappe og sæt permissions - kør som ISE script
 Import-Module ActiveDirectory
-$Users = @("anko", "tebj", "poti", "hafe", "beov")  # Tilføj alle brugernavne her
+$Users = @("ANHA", "MANI", "PEJE", "LAAN", "ANSO", "MEKR", "SORA", "CAPE", "THMA", "JEOL", "LITH", "KIMO", "NECH", "KAJA", "HEJO", "PILA", "MAPO", "BIHO", "OLIV", "EMFR", "RABE", "LOCA", "JASK", "STBE", "MIMO", "CENY", "FRDA", "HELA", "VISO", "TOHO")
+  # Tilføj alle brugernavne her
 
 foreach ($User in $Users) {
     # Opret brugermappe
