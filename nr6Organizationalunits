@@ -1,6 +1,7 @@
+#Spørger brugeren om Gruppenummer og bogstav, så de kan placeres ind i domænenavnet korrekt
 $gruppe = Read-Host "Gruppenummer?"
 $user = Read-Host "Bogstav?"
-
+#Oprætter Organizationalunits
 New-ADOrganizationalUnit -Name "Company" -path "DC=enterprise,DC=$gruppe$user,DC=gf2"
 New-ADOrganizationalUnit -Name "IT" -path "OU=Company,DC=enterprise,DC=$gruppe$user,DC=gf2"
 New-ADOrganizationalUnit -Name "Administration" -path "OU=Company,DC=enterprise,DC=$gruppe$user,DC=gf2"
