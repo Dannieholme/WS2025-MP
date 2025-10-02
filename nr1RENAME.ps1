@@ -1,3 +1,4 @@
+#Spørger brugeren hvilken gruppe og Bogstav, den ligger selv variablerne ind i navnet
 $group = Read-Host "Hvad er dit gruppe nummer? fx. 03"
 $user = Read-Host "Hvad er dit eget bogstav? fx. C"
 
