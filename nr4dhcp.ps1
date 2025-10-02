@@ -7,6 +7,7 @@ Set-DhcpServerv4OptionValue -ScopeId 192.168.103.0 -OptionId 3 -Value 192.168.10
 Set-dhcpserverv4optionvalue -scopeid 192.168.103.0 -OptionId 6 -value 192.168.103.10
 Set-DhcpServerv4OptionValue 15 enterprise.03C.gf2
 Set-DhcpServerv4Scope -ScopeId 192.168.103.0 -LeaseDuration ([TimeSpan]::FromDays(1))
-
+#Genstarter computeren så alt træder i kraft
 Restart-Computer
+
 
